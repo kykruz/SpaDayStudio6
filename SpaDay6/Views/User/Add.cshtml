@@ -1,0 +1,15 @@
+<form method='post'>
+    <div>
+        <input type="text" name="username" placeholder="Enter Username" value="@ViewBag.User?.UserName" />
+        <input type="email" name="email" placeholder="Enter Email" value="@ViewBag.User?.Email" />
+        <input type="password" name="password" placeholder="Enter Password" />
+        <input type="password" name="verify" placeholder="Verify Password" />
+        @if (ViewBag.Error != null)
+        {
+            <span style="color: darkred">@ViewBag.Error</span>
+        }
+
+        <button type="submit">Submit Form</button>
+        
+    </div>
+</form>
